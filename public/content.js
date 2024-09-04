@@ -11,7 +11,7 @@
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.action === "getParagraphText") {
       // Get the text content of the first <p> tag
-      const paragraphText = document.querySelector('.story-element')?.innerHTML || "No <p> tag found.";
+      const paragraphText = document.querySelector('.story-element')?.innerHTML || "No  tag found.";
       sendResponse({ text: paragraphText });
     }
   });
