@@ -11,7 +11,11 @@
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.action === "getParagraphText") {
       // Get the text content of the first <p> tag
-      const paragraphText = document.querySelector('.story-element')?.innerHTML || "No  tag found.";
+      const paragraph = document.querySelectorAll('.dlWCEZ');
+      console.log("paragrph: ",paragraph)
+      const paragraphText=Array.from(paragraph).map((p) =>p.innerText).join(".")
+
+      console.log("paragrphText: ",paragraphText)
       sendResponse({ text: paragraphText });
     }
   });

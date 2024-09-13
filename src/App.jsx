@@ -10,7 +10,7 @@ function App() {
         if (response && response.text) {
           setParagraphText(response.text);
         } else {
-          setParagraphText("No <p> tag found or unable to retrieve content.");
+          setParagraphText("No tag found or unable to retrieve content.");
         }
       });
     });
